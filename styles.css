@@ -1,1 +1,46 @@
 
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#061a2b;
+  color:white;
+}
+
+header{
+  background:black;
+  padding:20px;
+  text-align:center;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:10px;
+  font-weight:bold;
+}
+
+.hero{
+  padding:80px 20px;
+  text-align:center;
+  background:#0d2f4f;
+}
+
+section{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+button{
+  background:#FFD166;
+  border:none;
+  padding:12px 20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+footer{
+  background:black;
+  text-align:center;
+  padding:20px;
+}
