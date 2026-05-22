@@ -44,3 +44,18 @@ footer{
   text-align:center;
   padding:20px;
 }
+.progress-container {
+  width: 100%;
+  background: #ddd;
+  height: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #4CAF50;
+  transition: width 1s ease-in-out;
+}
