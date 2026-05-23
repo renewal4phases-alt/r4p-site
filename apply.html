@@ -1,31 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Apply | R4P</title>
-
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
-
-  <h1>Apply to Renewal Four Phases</h1>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="program.html">Program</a>
-    <a href="about.html">About</a>
-    <a href="apply.html">Apply</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-</header>
 <header>
   <h1>R4P Application Intake</h1>
 
@@ -38,59 +22,59 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
+
+<main>
+
 <section>
 
   <h2>Application Intake</h2>
 
   <p>
-    Complete the form below to begin the intake
-    and participation process with Renewal Four Phases.
+    Complete the form below to begin the intake process.
   </p>
 
 </section>
 
 <section>
 
-<form action="https://formspree.io/f/mvzyrllr" method="POST">
+  <label>Full Name</label><br><br>
+  <input type="text" name="name" placeholder="Your Full Name">
 
-<label>Full Name</label>
-<br><br>
+  <br><br>
 
-<input type="text"
-name="name"
-placeholder="Your Full Name">
+  <label>Email Address</label><br><br>
+  <input type="email" name="email" placeholder="Your Email">
 
-<br><br>
+  <br><br>
 
-<label>Email Address</label>
-<br><br>
+  <label>Current Situation</label><br><br>
+  <textarea name="situation" rows="6"></textarea>
 
-<input type="email"
-name="email"
-placeholder="Your Email">
+  <br><br>
 
-<br><br>
+  <label>Goals</label><br><br>
+  <textarea name="goals" rows="5"></textarea>
 
-<label>Current Situation</label>
-<br><br>
+  <br><br>
 
-<textarea
-name="situation"
-rows="6"
-placeholder="Tell us about your current situation"></textarea>
+  <label>Readiness</label><br><br>
+  <select name="readiness">
+    <option value="ready">Ready</option>
+    <option value="unsure">Unsure</option>
+    <option value="not_ready">Not Ready</option>
+  </select>
 
-<br><br>
+  <br><br>
 
-<label>Goals</label>
-<br><br>
+  <button type="button" onclick="submitApplication()">
+    Submit Application
+  </button>
 
-<textarea
-name="goals"
-rows="5"
-placeholder="What are your goals?"></textarea>
+</section>
 
-<br><br>
+</main>
 
-<button type="submit">Submit Application</button>
+<!-- Firebase goes here next -->
 
-
+</body>
+</html>
