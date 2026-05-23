@@ -69,16 +69,88 @@
   <button type="button" onclick="submitApplication()">
     Submit Application
   </button> 
+
+  <!-- Firebase -->
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+// YOUR FIREBASE CONFIG
+const firebaseConfig = {
+
+  apiKey: "AIzaSyBUHqEB2IgAd3uCUlTXW7796AlTvMsM-4o",
+ 
+  authDomain: "r4p-system.firebaseapp.com",
   
-</form>
+  projectId:  "https://r4p-system-default-rtdb.firebaseio.com",
+ 
+  storageBucket:  "r4p-system.firebasestorage.app",
+  
+  messagingSenderId: "858503948808",
+  
+  appId: "1:858503948808:web:01f14acac39ea22f267fbd"
+
+
+};
+
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firestore
+const db = getFirestore(app);
+
+
+// Submit Function
+window.submitApplication = async function () {
+
+  const data = {
+
+    name: document.querySelector('[name="name"]').value,
+
+    email: document.querySelector('[name="email"]').value,
+
+    situation: document.querySelector('[name="situation"]').value,
+
+    goals: document.querySelector('[name="goals"]').value,
+
+    readiness: document.querySelector('[name="readiness"]').value,
+
+    timestamp: Date.now()
+
+  };
+
+  try {
+
+    await addDoc(collection(db, "applications"), data);
+
+    alert("Application submitted successfully.");
+
+  } catch (error) {
+
+    console.error(error);
+
+    alert("Error submitting application.");
+
+  }
+
+};
+
+</script>
+
+</body>
+</html>
+  
+
   
 </section>
 
 </main>
 
-<!-- Firebase goes here next -->
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-</body>
-</html>
