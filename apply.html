@@ -5,12 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apply | R4P</title>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header>
+
   <h1>R4P Application Intake</h1>
 
   <nav>
@@ -18,9 +20,9 @@
     <a href="program.html">Program</a>
     <a href="about.html">About</a>
     <a href="apply.html">Apply</a>
-    <a href="donate.html">Get Involved</a>
     <a href="contact.html">Contact</a>
   </nav>
+
 </header>
 
 <main>
@@ -37,120 +39,59 @@
 
 <section>
 
-  <label>Full Name</label><br><br>
-  <input type="text" name="name" placeholder="Your Full Name">
+<form action="https://formspree.io/f/mvzyrllr" method="POST">
+
+  <label>Full Name</label>
+  <br><br>
+
+  <input type="text"
+  name="name"
+  placeholder="Your Full Name">
 
   <br><br>
 
-  <label>Email Address</label><br><br>
-  <input type="email" name="email" placeholder="Your Email">
+  <label>Email Address</label>
+  <br><br>
+
+  <input type="email"
+  name="email"
+  placeholder="Your Email">
 
   <br><br>
 
-  <label>Current Situation</label><br><br>
-  <textarea name="situation" rows="6"></textarea>
+  <label>Current Situation</label>
+  <br><br>
+
+  <textarea
+  name="situation"
+  rows="6"
+  placeholder="Tell us about your current situation"></textarea>
 
   <br><br>
 
-  <label>Goals</label><br><br>
-  <textarea name="goals" rows="5"></textarea>
+  <label>Goals</label>
+  <br><br>
+
+  <textarea
+  name="goals"
+  rows="5"
+  placeholder="What are your goals?"></textarea>
 
   <br><br>
 
-  <label>Readiness</label><br><br>
-  <select name="readiness">
-    <option value="ready">Ready</option>
-    <option value="unsure">Unsure</option>
-    <option value="not_ready">Not Ready</option>
-  </select>
-
-  <br><br>
-
-  <button type="button" onclick="submitApplication()">
+  <button type="submit">
     Submit Application
-  </button> 
+  </button>
 
-  <!-- Firebase -->
-<script type="module">
+</form>
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-
-import {
-  getFirestore,
-  collection,
-  addDoc
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-
-// YOUR FIREBASE CONFIG
-const firebaseConfig = {
-
-  apiKey: "AIzaSyBUHqEB2IgAd3uCUlTXW7796AlTvMsM-4o",
- 
-  authDomain: "r4p-system.firebaseapp.com",
-  
-  projectId:  "https://r4p-system-default-rtdb.firebaseio.com",
- 
-  storageBucket:  "r4p-system.firebasestorage.app",
-  
-  messagingSenderId: "858503948808",
-  
-  appId: "1:858503948808:web:01f14acac39ea22f267fbd"
-
-
-};
-
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// Initialize Firestore
-const db = getFirestore(app);
-
-
-// Submit Function
-window.submitApplication = async function () {
-
-  const data = {
-
-    name: document.querySelector('[name="name"]').value,
-
-    email: document.querySelector('[name="email"]').value,
-
-    situation: document.querySelector('[name="situation"]').value,
-
-    goals: document.querySelector('[name="goals"]').value,
-
-    readiness: document.querySelector('[name="readiness"]').value,
-
-    timestamp: Date.now()
-
-  };
-
-  try {
-
-    await addDoc(collection(db, "applications"), data);
-
-    alert("Application submitted successfully.");
-
-  } catch (error) {
-
-    console.error(error);
-
-    alert("Error submitting application.");
-
-  }
-
-};
-
-</script>
-
-</body>
-</html>
-  
-
-  
 </section>
 
 </main>
 
+<footer>
+  <p>Renewal Four Phases © 2026</p>
+</footer>
+
+</body>
+</html>
