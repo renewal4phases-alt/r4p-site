@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>R4P | Renewal Four Phases</title>
+  <title>R4P | Apply</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,10 +16,10 @@
       </a>
 
       <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="program.html">Program</a>
         <a href="about.html">About</a>
-        <a href="apply.html">Apply</a>
+        <a href="apply.html" class="active">Apply</a>
         <a href="contact.html">Contact</a>
       </nav>
 
@@ -27,148 +27,128 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="page-hero bg-front home-hero">
-    <div class="container hero-content home-hero-content">
-      <span class="eyebrow">Renewal Four Phases</span>
-
-      <h1 class="home-title">
-        Renew.<br>
-        <span>Restore.</span><br>
-        Rebuild.<br>
-        <span>Rise.</span>
-      </h1>
-
-      <p class="home-subtitle">
-        A four phase pathway from instability to healing, structure, purpose,
-        and long-term independence.
+  <section class="page-hero bg-apply">
+    <div class="container hero-content">
+      <span class="eyebrow">Apply for Support</span>
+      <h1 class="page-title">Take the First Step Toward a New Beginning</h1>
+      <p class="page-subtitle">
+        Submit a support request and tell us a little about your situation.
+        This form is meant to help R4P understand how to respond and where to begin.
       </p>
-
-      <div class="btn-row hero-buttons">
-        <a class="btn btn-primary" href="program.html">View Program</a>
-        <a class="btn btn-outline" href="apply.html">Apply Now</a>
-        <a class="btn btn-outline" href="contact.html">Contact Us</a>
-      </div>
     </div>
   </section>
 
-  <!-- MISSION + PHASE PREVIEW -->
-  <section class="section section-dark home-mission-section">
-    <div class="container home-mission-grid">
+  <section class="section section-dark">
+    <div class="container apply-layout">
 
-      <div class="mission-panel section-panel">
-        <div class="section-heading">
-          <span class="kicker">Our Mission</span>
-          <h2 class="section-title">A Pathway, Not Just a Temporary Fix</h2>
-          <p class="section-intro">
-            Renewal Four Phases (R4P) exists to help individuals move beyond crisis and into stability
-            through a structured process of support, healing, preparation, and long-term transition.
-          </p>
-          <div class="blue-line"></div>
+      <div class="form-card">
+        <h2>Application Form</h2>
+        <p>
+          Complete the form below with as much information as you are comfortable sharing.
+          Fields can be adjusted later if you want to simplify or expand the intake process.
+        </p>
+
+        <form class="apply-form" action="https://formspree.io/f/mvzyrllr" method="POST">
+          <div>
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="First Name" required />
+          </div>
+
+          <div>
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="Last Name" required />
+          </div>
+
+          <div>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="Date of Birth" />
+          </div>
+
+          <div>
+            <label for="city">Current Location / City *</label>
+            <input type="text" id="city" name="Current Location / City" required />
+          </div>
+
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="Email Address" />
+          </div>
+
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone Number" />
+          </div>
+
+          <div>
+            <label for="housing">Current Housing Situation *</label>
+            <select id="housing" name="Current Housing Situation" required>
+              <option value="">Select one</option>
+              <option>Currently unhoused</option>
+              <option>At risk of homelessness</option>
+              <option>Temporarily staying with others</option>
+              <option>In unstable housing</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="referral">How did you hear about R4P?</label>
+            <input type="text" id="referral" name="How did you hear about R4P?" />
+          </div>
+
+          <div class="field-full">
+            <label for="needs">What support do you need right now?</label>
+            <textarea id="needs" name="Current Support Needs" placeholder="Tell us about your current situation, needs, or what kind of help you are looking for."></textarea>
+          </div>
+
+          <div class="field-full">
+            <label for="goals">What are your current goals?</label>
+            <textarea id="goals" name="Current Goals" placeholder="Examples: shelter, housing, stability, employment, transportation, recovery support, reconnecting with resources, etc."></textarea>
+          </div>
+
+          <div class="field-full btn-row">
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+            <a class="btn btn-outline" href="contact.html">Ask a Question First</a>
+          </div>
+        </form>
+      </div>
+
+      <aside class="next-card">
+        <h2>What Happens Next?</h2>
+        <p>
+          After you submit the form, R4P can review the information and determine the best next step for follow-up and support.
+        </p>
+
+        <div class="next-steps">
+          <div class="step">
+            <strong>1. Review</strong>
+            <span>Your application is reviewed to understand your current needs and situation.</span>
+          </div>
+
+          <div class="step">
+            <strong>2. Contact</strong>
+            <span>If appropriate, someone can follow up to ask questions, clarify needs, or discuss possible support.</span>
+          </div>
+
+          <div class="step">
+            <strong>3. Support Path</strong>
+            <span>The goal is to connect each person to the most appropriate starting point inside the R4P model.</span>
+          </div>
         </div>
-
-        <p class="mission-copy">
-          R4P is built around the belief that people need more than emergency response alone.
-          They need a system that helps them stabilize, rebuild confidence, prepare for the future,
-          and move toward lasting independence with dignity and support.
-        </p>
-
-        <p class="mission-copy">
-          The goal is to create a clear pathway for individuals facing homelessness, instability,
-          or life disruption—one that addresses immediate need while also building toward housing,
-          opportunity, and a stronger foundation for the future.
-        </p>
-      </div>
-
-      <div class="phase-preview-grid">
-        <article class="phase-preview-card">
-          <div class="phase-preview-icon">🏠</div>
-          <h3>Phase 1<br>Stabilize</h3>
-          <p>Secure immediate safety, shelter, basic needs, and a starting point for recovery.</p>
-        </article>
-
-        <article class="phase-preview-card">
-          <div class="phase-preview-icon">🫶</div>
-          <h3>Phase 2<br>Renew</h3>
-          <p>Focus on healing, support, restoration, and rebuilding a sense of stability and dignity.</p>
-        </article>
-
-        <article class="phase-preview-card">
-          <div class="phase-preview-icon">📘</div>
-          <h3>Phase 3<br>Prepare</h3>
-          <p>Develop life skills, planning, readiness, and tools needed for independent living.</p>
-        </article>
-
-        <article class="phase-preview-card">
-          <div class="phase-preview-icon">🌅</div>
-          <h3>Phase 4<br>Rise</h3>
-          <p>Transition toward housing, independence, long-term stability, and a new beginning.</p>
-        </article>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- HOME CONTENT STRIP -->
-  <section class="section home-detail-section">
-    <div class="container home-detail-grid">
-
-      <div class="home-detail-card section-panel">
-        <span class="kicker">Why R4P Exists</span>
-        <h2 class="section-title">Restoration With Structure</h2>
-        <p class="section-intro">
-          Too many people are forced to live inside cycles of instability without a clear process for getting out.
-          R4P is designed to change that by offering a phased pathway rather than a one-time response.
-        </p>
-        <div class="blue-line"></div>
-
-        <p class="mission-copy">
-          Instead of treating homelessness or instability as a single event, R4P approaches it as a process
-          of restoration. The model is built to help participants move from immediate crisis into support,
-          planning, preparation, and long-term transition.
-        </p>
-
-        <div class="btn-row" style="margin-top: 20px;">
-          <a class="btn btn-primary" href="about.html">Learn More About R4P</a>
-        </div>
-      </div>
-
-      <div class="home-detail-card section-panel">
-        <span class="kicker">Who We Serve</span>
-        <h2 class="section-title">Support for Individuals Facing Instability</h2>
-        <p class="section-intro">
-          R4P is intended for people facing homelessness, unstable housing, major hardship,
-          or a life disruption that requires both immediate support and a longer-term plan.
-        </p>
-        <div class="blue-line"></div>
-
-        <ul class="home-list">
-          <li>Individuals experiencing homelessness or housing instability</li>
-          <li>People in need of stabilization, structure, and support planning</li>
-          <li>Participants seeking a pathway toward housing and independence</li>
-          <li>Community members who need more than a temporary emergency solution</li>
-        </ul>
-
-        <div class="btn-row" style="margin-top: 20px;">
-          <a class="btn btn-outline" href="apply.html">Start an Application</a>
-        </div>
-      </div>
+      </aside>
 
     </div>
   </section>
 
-  <!-- CTA STRIP -->
   <section class="cta-strip">
     <div class="container cta-strip-inner">
       <div>
-        <h3>Ready to move forward?</h3>
-        <p>View the program, submit an application, or contact R4P to learn more.</p>
+        <h3>Need help before applying?</h3>
+        <p>If you are unsure whether the program fits your situation, use the contact page and ask first.</p>
       </div>
-
       <div class="btn-row">
-        <a class="btn btn-primary" href="program.html">View Program</a>
-        <a class="btn btn-outline" href="apply.html">Apply</a>
-        <a class="btn btn-outline" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="contact.html">Contact Us</a>
+        <a class="btn btn-outline" href="program.html">View Program</a>
       </div>
     </div>
   </section>
